@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actividad 5 - UI Kit Help Desk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <span class="eyebrow">Design System</span>
+        <h1>UI Kit para Sistema de Gestión de Incidentes</h1>
+        <p>
+          Biblioteca de componentes visuales reutilizables creada con CSS3 puro,
+          variables, modelo de cajas, selectores avanzados y diseño adaptable.
+        </p>
+      </div>
+      <div class="header-panel" aria-label="Resumen del sistema">
+        <strong>Help Desk</strong>
+        <span>Componentes base</span>
+        <small>Botones · Formularios · Cards · Badges · Alertas</small>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section-block" aria-labelledby="tokens-title">
+      <div class="section-title">
+        <span class="section-number">01</span>
+        <div>
+          <h2 id="tokens-title">Paleta corporativa y variables CSS</h2>
+          <p>Variables definidas en <code>:root</code> para mantener consistencia visual.</p>
+        </div>
+      </div>
+
+      <div class="color-grid">
+        <article class="color-card primary"><span>Primario</span><strong>#1D4ED8</strong></article>
+        <article class="color-card secondary"><span>Secundario</span><strong>#0F172A</strong></article>
+        <article class="color-card success"><span>Éxito</span><strong>#16A34A</strong></article>
+        <article class="color-card warning"><span>Advertencia</span><strong>#F59E0B</strong></article>
+        <article class="color-card danger"><span>Error / Peligro</span><strong>#DC2626</strong></article>
+        <article class="color-card info"><span>Información</span><strong>#0891B2</strong></article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="buttons-title">
+      <div class="section-title">
+        <span class="section-number">02</span>
+        <div>
+          <h2 id="buttons-title">Botones reutilizables</h2>
+          <p>Botón primario, secundario y de peligro con estados <code>:hover</code> y <code>:focus-visible</code>.</p>
+        </div>
+      </div>
+
+      <div class="component-preview stack-inline">
+        <button class="btn btn--primary" type="button">Registrar incidente</button>
+        <button class="btn btn--secondary" type="button">Ver historial</button>
+        <button class="btn btn--danger" type="button">Eliminar ticket</button>
+        <button class="btn btn--ghost" type="button">Cancelar</button>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="forms-title">
+      <div class="section-title">
+        <span class="section-number">03</span>
+        <div>
+          <h2 id="forms-title">Formularios</h2>
+          <p>Campos de texto y listas desplegables con bordes, padding y sombreado al interactuar.</p>
+        </div>
+      </div>
+
+      <form class="form-card" aria-label="Formulario de demostración de ticket">
+        <div class="form-grid">
+          <label class="form-field">
+            <span>Nombre del solicitante</span>
+            <input type="text" placeholder="Ej. Roberto Ágila" autocomplete="name" />
+          </label>
+
+          <label class="form-field">
+            <span>Categoría del incidente</span>
+            <select>
+              <option>Soporte técnico</option>
+              <option>Redes</option>
+              <option>Software</option>
+              <option>Hardware</option>
+            </select>
+          </label>
+
+          <label class="form-field form-field--full">
+            <span>Descripción</span>
+            <textarea rows="4" placeholder="Describa brevemente el incidente reportado..."></textarea>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn--primary" type="button">Guardar ticket</button>
+          <button class="btn btn--ghost" type="reset">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section-block" aria-labelledby="cards-title">
+      <div class="section-title">
+        <span class="section-number">04</span>
+        <div>
+          <h2 id="cards-title">Tarjetas de tickets</h2>
+          <p>Cards con sombras, bordes redondeados y clases reutilizables para mostrar incidentes.</p>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <article class="ticket-card" data-priority="alta">
+          <div class="card-header">
+            <span class="ticket-id">#HD-001</span>
+            <span class="badge badge--high">Alta</span>
+          </div>
+          <h3>Falla de conectividad</h3>
+          <p>El usuario reporta pérdida de acceso a internet en el área administrativa.</p>
+          <div class="card-footer">
+            <span>Redes</span>
+            <button class="btn btn--small btn--secondary" type="button">Revisar</button>
+          </div>
+        </article>
+
+        <article class="ticket-card" data-priority="media">
+          <div class="card-header">
+            <span class="ticket-id">#HD-002</span>
+            <span class="badge badge--medium">Media</span>
+          </div>
+          <h3>Actualización pendiente</h3>
+          <p>Equipo asignado requiere actualización de software institucional.</p>
+          <div class="card-footer">
+            <span>Software</span>
+            <button class="btn btn--small btn--secondary" type="button">Revisar</button>
+          </div>
+        </article>
+
+        <article class="ticket-card" data-priority="baja">
+          <div class="card-header">
+            <span class="ticket-id">#HD-003</span>
+            <span class="badge badge--low">Baja</span>
+          </div>
+          <h3>Solicitud de periférico</h3>
+          <p>Se solicita revisión de mouse y teclado para estación de trabajo.</p>
+          <div class="card-footer">
+            <span>Hardware</span>
+            <button class="btn btn--small btn--secondary" type="button">Revisar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="badges-title">
+      <div class="section-title">
+        <span class="section-number">05</span>
+        <div>
+          <h2 id="badges-title">Badges y alertas</h2>
+          <p>Etiquetas pequeñas para prioridad y mensajes visuales para estados del sistema.</p>
+        </div>
+      </div>
+
+      <div class="component-preview badges-row" aria-label="Badges de prioridad">
+        <span class="badge badge--high">Prioridad alta</span>
+        <span class="badge badge--medium">Prioridad media</span>
+        <span class="badge badge--low">Prioridad baja</span>
+        <span class="badge badge--closed">Cerrado</span>
+      </div>
+
+      <div class="alerts-grid">
+        <div class="alert alert--success" role="status">
+          <strong>Ticket registrado.</strong>
+          <span>La solicitud fue guardada correctamente.</span>
+        </div>
+        <div class="alert alert--warning" role="alert">
+          <strong>Revisión pendiente.</strong>
+          <span>El incidente necesita asignación de técnico.</span>
+        </div>
+        <div class="alert alert--danger" role="alert">
+          <strong>Error de validación.</strong>
+          <span>Complete los campos obligatorios antes de enviar.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Actividad #5 - Desarrollo de una Librería de Componentes UI con CSS3 puro.</p>
+    </div>
+  </footer>
+</body>
+</html>
